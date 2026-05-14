@@ -244,7 +244,7 @@ function M.get_root_dir(bufnr)
   end
 
   local function has_root_files(path)
-    local root_files = { "jsconfig.json", "package.json", ".git" }
+    local root_files = { "nx.json", "jsconfig.json", "package.json", ".git" }
     for _, file in ipairs(root_files) do
       if vim.fn.filereadable(vim.fn.join({ path, file }, "/")) == 1 then
         return true
